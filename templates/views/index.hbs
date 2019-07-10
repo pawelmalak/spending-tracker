@@ -28,26 +28,27 @@
       <div class="col-12 col-md-8 col-lg-6">
         <div class="card mt-5">
           <div class="card-body">
-          <form>
-            <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label text-muted" for="exampleCheck1">Keep me logged in</label>
-            </div>
-            <button type="submit" class="btn btn-primary col-12">Login</button>
-          </form>
+            <h4 class="card-title font-weight-bold">{{cardTitle}}</h4>
+            <form>
+              <div class="form-group">
+                <label class="text-muted" for="emailInput">Email address</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label class="text-muted" for="passwordInput">Password</label>
+                <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+              </div>
+              <div class="form-group form-check text-center">
+                <input type="checkbox" class="form-check-input" id="keepCheckbox">
+                <label class="form-check-label text-muted" for="keepCheckbox">Keep me logged in</label>
+              </div>
+              <button type="submit" class="btn btn-primary col-12" id="submitBtn">{{btnText}}</button>
+            </form>
           </div>
         </div>
       </div>
       <div class="col-12 col-md-8 col-lg-6 mt-3 text-center">
-        <a href="#">Don't have an account?&nbsp;&nbsp;Create one now!</a>
+        <a href="{{linkPath}}">{{linkText}}</a>
       </div>
     </div>
   </div>

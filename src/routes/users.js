@@ -6,7 +6,6 @@ router.get('/users', (req, res) => {
   res.send('users')
 })
 
-// Create new user
 router.post('/users', async (req, res) => {
   const user = new User(req.body)
 

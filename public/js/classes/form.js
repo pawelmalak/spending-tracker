@@ -7,8 +7,8 @@ class Form {
     this.keepCheckbox = document.querySelector('#keepCheckbox');
   }
 
-  handleValidationErrors() {
-
+  handleValidationErrors(errors) {
+    console.log(500)
   }
 
   async registerUser(data) {
@@ -24,7 +24,7 @@ class Form {
       referrer: 'no-referrer',
       body: JSON.stringify(data)
     });
-
+    
     const response = await request.json();
     return response;
   }
@@ -41,9 +41,8 @@ class Form {
       this.registerUser(data)
         .then((data) => {
           console.log(data);
-          if (data.errors) {
-            console.warn(data)
-          }
+
+          if (data.status === 400) this.handleValidationErrors(data.errors)
           if (data.redirect) window.location.replace(data.redirect);
         })
         .catch((error) => {
